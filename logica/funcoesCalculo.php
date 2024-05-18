@@ -24,4 +24,20 @@ function celcius($num1){
     return $result; 
 
 }
+function metros($num1){
+    $result = $num1 / 100;
+    return $result;
+}
+function centimetros($num1){
+    $result = $num1 * 100;
+    return $result;
+}
+function kmmetros($num1){
+    $result = $num1 * 1000;
+    return $result;
+}
+function km($num1){
+    $result = $num1 / 1000;
+    return $result;
+}
 ?>

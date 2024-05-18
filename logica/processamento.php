@@ -49,5 +49,31 @@ if(!empty($_POST['conversor'])){
     die();
 
 }
+if(!empty($_GET['tamanho'])){
+
+    $numero1 = $_GET['tamanho'];
+   
+
+    if ($_GET['selectOperacoes'] == "metros")
+    {
+        $resultado = "Centimetros para Metros: ". metros($numero1)." m " ;
+    }
+    else if ($_GET['selectOperacoes'] =="centimetros")
+    {
+        $resultado = "Metros para centimetros: ". centimetros($numero1). " cm ";
+    }
+    else if ($_GET['selectOperacoes'] =="kmmetros")
+    {
+        $resultado = "Quilometros para Metros: ". kmmetros($numero1). " m ";
+    }
+    else if ($_GET['selectOperacoes'] =="km")
+    {
+        $resultado = "Metros para Km: ". km($numero1). " km ";
+    }
+    $_SESSION['tamanho'] = $resultado;
+    header("location:../conversor.php");
+    die();
+
+}
 
 ?>
